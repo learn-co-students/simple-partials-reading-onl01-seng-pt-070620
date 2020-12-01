@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @author = @post.author #added to be able to properly use partial set up in authors/author --> (show.html.erb)
   end
 
   def new
